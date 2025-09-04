@@ -1,1 +1,10 @@
+size(500, 500);
 
+
+text("Dit is geen text", 350, 100);
+
+
+text("Dit is een text", 100, 250);
+
+
+text("Hallo dit is een text", 400, 320);
