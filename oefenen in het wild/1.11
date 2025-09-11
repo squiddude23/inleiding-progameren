@@ -1,1 +1,10 @@
-
+int steen1 = 6;
+int steen2 = 4;
+int steen3 = 1;
+String resultaat = "";
+if (steen1 <= 1 && steen2 <= 1 && steen3 <= 1){
+  println ("Mis!");
+}
+if (steen1 >= 2 && steen2 >= 2 && steen3 >= 2){
+  println ("Hit!");
+}
