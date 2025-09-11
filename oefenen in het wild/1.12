@@ -1,1 +1,6 @@
-
+int totaalLessen = 20;
+int lessenGevolgd = 17;
+int cijfer = 7;
+if (lessenGevolgd >= 16 || cijfer >= 5.5){
+  println ("geslaagd");
+}
