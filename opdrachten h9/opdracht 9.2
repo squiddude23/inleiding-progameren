@@ -1,1 +1,15 @@
+int mijnGetal = 7;
 
+void setup(){
+  mijnMethode (mijnGetal, 8);
+  mijnMethode (mijnGetal, 26);
+}
+
+void draw(){
+  
+}
+
+void mijnMethode (int getal, int getaltwee){
+  int totaal = getal + getaltwee / 2;
+  println("som " + getal + " " + getaltwee + " " + totaal);
+}
