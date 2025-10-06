@@ -1,1 +1,54 @@
+BankAccount mijnRekening;
+
+void setup() {
+  size(400, 200);
+
+
+  mijnRekening = new BankAccount("BANK ", "Rob Lucci", 1000.0);
+
+  // Test de methoden
+  println("Begin saldo: " + mijnRekening.saldo);
+
+  mijnRekening.storten(250.0);
+  println("Na storting: " + mijnRekening.saldo);
+
+  mijnRekening.opnemen(400.0);
+  println("Na opname: " + mijnRekening.saldo);
+
+  mijnRekening.opnemen(1000.0);
+  println("Na mislukte opname: " + mijnRekening.saldo);
+}
+
+
+
+class BankAccount {
+  String rekeningNummer;
+  String eigenaar;
+  float saldo;
+
+  BankAccount(String rekeningNummer, String eigenaar, float saldo) {
+    this.rekeningNummer = rekeningNummer;
+    this.eigenaar = eigenaar;
+    this.saldo = saldo;
+  }
+
+
+  void storten(float bedrag) {
+    if (bedrag > 0) {
+      saldo += bedrag;
+      println(eigenaar + " stortte €" + bedrag);
+    } else {
+      println("Ongeldig bedrag om te storten.");
+    }
+  }
+
+  void opnemen(float bedrag) {
+    if (bedrag > 0 && saldo - bedrag >= 0) {
+      saldo -= bedrag;
+      println(eigenaar + " nam €" + bedrag + " op.");
+    } else {
+      println("Opname niet toegestaan. Onvoldoende saldo!");
+    }
+  }
+}
 
